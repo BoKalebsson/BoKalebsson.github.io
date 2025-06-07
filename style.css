@@ -45,8 +45,8 @@ body {
 }
 
 .card__img {
-  width: 40px;
-  height: 40px;
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
   border: 2px solid #996ed9;
   margin-right: 10px;
