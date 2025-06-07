@@ -13,7 +13,7 @@ body {
   font-size: 13px;
 }
 
-.testimonials {
+.grid__design {
   max-width: 1440px;
   margin: 100px auto;
   padding: 20px;
@@ -103,7 +103,7 @@ footer {
 }
 
 @media (max-width: 768px) {
-  .testimonials {
+  .grid__design {
     grid-template-columns: 1fr;
     width: 100%;
   }
