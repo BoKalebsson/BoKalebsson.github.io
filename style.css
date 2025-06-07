@@ -89,6 +89,11 @@ body {
   margin-right: 10px;
 }
 
+.contact__link {
+  color: #000;
+  text-decoration: none;
+}
+
 .card__button {
   background-color: #fff;
   border: 0 solid #e2e8f0;
