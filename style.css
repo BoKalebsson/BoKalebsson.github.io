@@ -67,6 +67,26 @@ body {
   margin-bottom: 20px;
 }
 
+.card__quote__contact {
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.4;
+  opacity: 80%;
+  margin-bottom: 20px;
+}
+
+.card__quote__contact img {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid #996ed9;
+  margin-right: 10px;
+}
+
 .card__button {
   background-color: #fff;
   border: 0 solid #e2e8f0;
