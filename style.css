@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@200;300;400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@200;300;400;700&display=swap");
 
 * {
   box-sizing: border-box;
@@ -8,7 +8,7 @@
 
 body {
   background: #edf2f8;
-  font-family: 'Barlow Semi Condensed', sans-serif;
+  font-family: "Barlow Semi Condensed", sans-serif;
   line-height: 1.7;
   font-size: 13px;
 }
@@ -28,6 +28,8 @@ body {
   padding: 20px;
   box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
   margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
 }
 
 .card__header {
@@ -67,31 +69,87 @@ body {
   margin-bottom: 20px;
 }
 
-.card__quote__contact {
-  /* display: flex;
-  align-items: center; */
+.contact__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 9px 12px;
+  margin: 6px 0;
+  border-radius: 7px;
+  border-left: 3px solid transparent;
+  text-decoration: none;
+  color: #000;
   font-size: 15px;
   font-weight: 500;
-  line-height: 1.4;
-  opacity: 80%;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  padding: 10px;
+  opacity: 0.8;
+  transition:
+    border-color 0.2s ease,
+    background 0.2s ease,
+    opacity 0.2s ease;
 }
 
-.card__quote__contact img {
-  margin-top: 5px;
-  margin-bottom: 5px;
-  width: 40px;
-  height: 40px;
+.contact__item:hover {
+  border-left-color: #996ed9;
+  background: rgba(153, 110, 217, 0.07);
+  opacity: 1;
+}
+
+.contact__item span {
+  font-size: 13px;
+  font-weight: 400;
+  opacity: 0;
+  transform: translateX(6px);
+  transition:
+    opacity 0.25s ease,
+    transform 0.25s ease;
+}
+
+.contact__item:hover span {
+  opacity: 0.6;
+  transform: translateX(0);
+}
+
+.contact__status {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 13px;
+  font-weight: 500;
+  opacity: 0.6;
+  margin-top: 10px;
+  margin-bottom: 4px;
+  padding: 0 12px;
+}
+
+.contact__status-dot {
+  width: 8px;
+  height: 8px;
   border-radius: 50%;
-  border: 2px solid #996ed9;
-  margin-right: 10px;
+  background: #4caf7d;
+  box-shadow: 0 0 0 0 rgba(76, 175, 125, 0.5);
+  animation: pulse 2s infinite;
+  flex-shrink: 0;
 }
 
-.contact__link {
-  color: #000;
-  text-decoration: none;
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(76, 175, 125, 0.5);
+  }
+  70% {
+    box-shadow: 0 0 0 6px rgba(76, 175, 125, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(76, 175, 125, 0);
+  }
+}
+
+.contact__copyright {
+  font-size: 12px;
+  opacity: 0.35;
+  text-align: center;
+  padding: 0 12px;
+  margin-top: auto;
+  padding-top: 18px;
 }
 
 .card__button {
@@ -110,7 +168,9 @@ body {
   cursor: pointer;
 }
 
-.card__button:hover {opacity: 1}
+.card__button:hover {
+  opacity: 1;
+}
 
 .card--bg-purple {
   background: hsl(263, 55%, 52%);
